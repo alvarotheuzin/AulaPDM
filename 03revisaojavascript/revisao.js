@@ -65,68 +65,70 @@ frutas.forEach(fruta => console.log(fruta))
 frutas.pop()
 console.log(frutas)
 
-//Objetos
+// Objetos
 let pessoa = {
-    nome: "Alvaro Matheus",
-    idade: 21,
-    peso: 50,
-    altura: 164, 
+  nome: "Gustavo Clay",
+  idade: 30,
+  peso: 80,
+  altura: 170
 }
 console.log(pessoa.nome)
 pessoa.idade = 40
 console.log(pessoa.idade)
 
 // desatribuição de objetos
-
 const { peso, altura } = pessoa
 console.log(peso)
 console.log(altura)
 
-//propagação de objeto
+// propagação de objetos
 const endereco = {
-    cidade: "Brasília",
-    uf: "DF"
+  cidade: "Brasília",
+  uf: "DF"
 }
 
 const pessoaCompleto = {
-    ...pessoa
-    ...endereco
+  ...pessoa,
+  ...endereco
 }
 
 console.log(pessoaCompleto)
 
-//Funções
-//Declaração
+// Funções
+// Declaração
 function somar(numA, numB) {
-const resultado = numA + numB
-console.log(resultado)
+  const resultado = numA + numB
+  console.log(resultado)
 }
 
-//uso
+// Uso
 somar(2,2)
 somar(3,3)
 somar(10,5)
 
-//função anonima
+// função anonima
 const subtrair = function (numA, numB){
-const resultado = numA - numB
-console.log(resultado)
+  const resultado = numA - numB
+  console.log(resultado)
 }
 
 subtrair(4,2)
 
-//arrow function
+// arrow function
 const multiplicar = (numA, numB) => numA * numB
 
-multiplicar(2,2)
+multiplicar(2, 2)
 
+// importar uma função de outro arquivo
 
-//importar uma função de outro arquivo
+// No padrão do node sem projeto não funciona
+// o import por modulos, tem que utilizar o module.exports
+// Mas esse formato é o que vamos utilizar nos projetos
+import { calcularIMC } from "./CalculadoraIMC"
 
-//No padrão do Node sem projeto não funciona
-//o import por modulos
-import { calcuarIMC } from "./calculadoraIMC"
+// Modo de import padrão no node
+// const calculadoraIMC = require("./CalculadoraIMC")
 
-//          
-const res = calcuarIMC(61,170)
-consolelog(res)
+const res = calcularIMC(80, 170)
+
+console.log(res)

@@ -9,6 +9,9 @@ function calcular(num) {
 
 const resultados = calcular(numero);
     
-console.log(`O dobro de ${numero} é: ${resultados.dobro}`);
-console.log(`O triplo de ${numero} é: ${resultados.triplo}`);
-console.log(`O quadrado de ${numero} é: ${resultados.quadrado}`);
+console.log(`O dobro de ${numero} é:`);
+console.log(resultados.dobro);
+console.log(`O triplo de ${numero} é:`);
+console.log(resultados.triplo);
+console.log(`O quadrado de ${numero} é:`);
+console.log(resultados.quadrado);
