@@ -4,6 +4,7 @@ import PrimeiroComponente from './componentes/PrimeiroComponente';
 import JavascriptComponente from './componentes/JavascriptComponente';
 import Perfil from './componentes/Perfil';
 import ListaComponentes from './componentes/ListaComponentes';
+import Atleta from './componentes/Atleta';
 
 export default function App() {
   return (
@@ -30,11 +31,15 @@ export default function App() {
         email= "email@iesb.edu.br"
       /> */}
 
+      {/*
       <PrimeiroComponente />
       
       <JavascriptComponente />
 
       <ListaComponentes />
+      */}
+
+      <Atleta />
 
       <StatusBar style="auto" />
     </View>
