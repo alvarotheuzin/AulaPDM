@@ -11,7 +11,7 @@ export default function App() {
   const listaAtletas = [
     {
       nome: "Messi",
-      idade: "40",
+      idade: "37",
       numero: "10",
       imagem: "https://i.pinimg.com/736x/6d/7a/bc/6d7abc9dbdd3e21201a69a5eec684ffb.jpg",
     },
@@ -54,10 +54,9 @@ export default function App() {
 
         {
           listaAtletas.map(
-            (atleta, index) => {
+            atleta => {
               return (
                 <Atleta
-                  key={index}
                   nome={atleta.nome}
                   idade={atleta.idade}
                   numero={atleta.numero}

@@ -11,7 +11,7 @@ export default function Atleta(props) {
       <Text style={styles.texto}>Número: {numero}</Text>
 
       <Image
-        source={{ uri: imagem }} // Corrigido para exibir a imagem corretamente
+        source={{ uri: imagem }}
         style={styles.imagem}
       />
     </View>
