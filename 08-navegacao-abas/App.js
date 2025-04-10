@@ -30,9 +30,23 @@ export default function App() {
           }}
           /> 
 
-          <Tab.Screen name='ProfileScreen' component={ProfileScreen}/> 
+          <Tab.Screen
+          name='ProfileScreen'
+          component={ProfileScreen}
+          options={{
+            title: 'Perfil',
+            tabBarIcon: ({color, size}) => <Ionicons name= 'person' color={color} size={size} />
+          }}
+          /> 
 
-          <Tab.Screen name='SettingsScreen' component={SettingsScreen}/> 
+          <Tab.Screen
+          name='SettingsScreen'
+          component={SettingsScreen}
+          options={{
+            title: 'Configurações',
+            tabBarIcon: ({color, size}) => <Ionicons name= 'settings' color={color} size={size} />
+          }}
+          /> 
        
         </Tab.Navigator>
       </NavigationContainer>
