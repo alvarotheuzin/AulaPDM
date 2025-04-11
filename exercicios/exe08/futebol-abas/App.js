@@ -15,7 +15,14 @@ export default function App() {
 
     <PaperProvider>
       <NavigationContainer>
-        <Tab.Navigator>
+        <Tab.Navigator
+        screenOptions={{
+          tabBarStyle: {
+            backgroundColor: '#1e293b',
+          },
+          tabBarActiveTintColor: 'red',
+          tabBarInactiveTintColor: '#94a3b8',
+        }}>
 
           <Tab.Screen
             name='EscudoScreen'
@@ -23,9 +30,9 @@ export default function App() {
             options={{
               title: 'Escudo',
               headerTitleAlign: 'center',
-              headerTintColor: 'white',
+              headerTintColor: 'red',
               headerStyle: {
-                backgroundColor: 'red'
+                backgroundColor: '#1e293b'
               },
               tabBarIcon: ({ color, size }) => <Ionicons name='shield' color={color} size={size} />
             }}
@@ -37,6 +44,10 @@ export default function App() {
             options={{
               title: 'Jogador',
               headerTitleAlign: 'center',
+              headerTintColor: 'red',
+              headerStyle: {
+                backgroundColor: '#1e293b'
+              },
               tabBarIcon: ({ color, size }) => <Ionicons name='person' color={color} size={size} />
             }}
           />
@@ -46,7 +57,11 @@ export default function App() {
             component={TitulosScreen}
             options={{
               title: 'Titulos',
+              headerTintColor: 'red',
               headerTitleAlign: 'center',
+              headerStyle: {
+                backgroundColor: '#1e293b'
+              },
               tabBarIcon: ({ color, size }) => <Ionicons name='trophy' color={color} size={size} />
             }}
           />

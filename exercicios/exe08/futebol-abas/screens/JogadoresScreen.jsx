@@ -32,24 +32,30 @@ const jogadores = [
 
 export default function JogadoresScreen() {
   return (
-    <FlatList
-      data={jogadores}
-      contentContainerStyle={{ padding: 10 }}
-      renderItem={({ item }) => (
-        <Card style={styles.card}>
-          <View style={styles.container}>
-            <Avatar.Image source={{ uri: item.imagem }} size={60} style={styles.avatar} />
-            <View style={styles.textContainer}>
-              <Text style={styles.nome}> {item.numero} - {item.nome}</Text>
+    <View style={styles.page}>
+      <FlatList
+        data={jogadores}
+        contentContainerStyle={{ padding: 10 }}
+        renderItem={({ item }) => (
+          <Card style={styles.card}>
+            <View style={styles.container}>
+              <Avatar.Image source={{ uri: item.imagem }} size={60} style={styles.avatar} />
+              <View style={styles.textContainer}>
+                <Text style={styles.nome}> {item.numero} - {item.nome}</Text>
+              </View>
             </View>
-          </View>
-        </Card>
-      )}
-    />
+          </Card>
+        )}
+      />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    backgroundColor: '#0f172a', 
+  },
   card: {
     backgroundColor: '#334155',
     borderRadius: 10,
@@ -60,6 +66,9 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  avatar: {
+    backgroundColor: '#1e293b',
   },
   textContainer: {
     marginLeft: 12,

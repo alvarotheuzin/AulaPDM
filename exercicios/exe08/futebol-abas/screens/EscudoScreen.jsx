@@ -45,13 +45,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   escudo: {
-    width: 120,
-    height: 120,
+    width: 220,
+    height: 220,
     marginBottom: 16,
     borderRadius: 12,
   },
   nome: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: 'bold',
     color: '#f1f5f9',
     textAlign: 'center',

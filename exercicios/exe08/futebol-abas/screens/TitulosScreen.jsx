@@ -23,23 +23,29 @@ const titulos = [
 
 export default function TitulosScreen() {
   return (
-    <FlatList
-      data={titulos}
-      contentContainerStyle={{ padding: 16 }}
-      keyExtractor={(item) => item.nome}
-      renderItem={({ item }) => (
-        <Card style={styles.card}>
-          <View style={styles.cardContent}>
-            <Text style={styles.titulo}>{item.nome}</Text>
-            <Text style={styles.anos}>{item.anos.join(', ')}</Text>
-          </View>
-        </Card>
-      )}
-    />
+    <View style={styles.page}>
+      <FlatList
+        data={titulos}
+        contentContainerStyle={{ padding: 16 }}
+        keyExtractor={(item) => item.nome}
+        renderItem={({ item }) => (
+          <Card style={styles.card}>
+            <View style={styles.cardContent}>
+              <Text style={styles.titulo}>{item.nome}</Text>
+              <Text style={styles.anos}>{item.anos.join(', ')}</Text>
+            </View>
+          </Card>
+        )}
+      />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    backgroundColor: '#0f172a',
+  },
   card: {
     backgroundColor: '#1e293b',
     borderRadius: 12,
