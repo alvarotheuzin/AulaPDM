@@ -11,14 +11,17 @@ const jogadores = [
 
 const JogadoresScreen = () => {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       <FlatList
         data={jogadores}
+        keyExtractor={(item) => item.nome}
         renderItem={({ item }) => (
           <View style={styles.playerCard}>
             <Image style={styles.image} source={{ uri: item.imagem }} />
-            <Text style={styles.name}>{item.nome}</Text>
-            <Text style={styles.number}>Número: {item.numero}</Text>
+            <View style={styles.info}>
+              <Text style={styles.name}>{item.nome}</Text>
+              <Text style={styles.number}>Número: {item.numero}</Text>
+            </View>
           </View>
         )}
       />
@@ -27,25 +30,42 @@ const JogadoresScreen = () => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#121212',
+    padding: 10,
+  },
   playerCard: {
     flexDirection: 'row',
-    padding: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    alignItems: 'center',
+    backgroundColor: '#1e1e1e',
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 10,
+    shadowColor: '#000',
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 3,
   },
   image: {
     width: 60,
     height: 60,
     borderRadius: 30,
+    borderWidth: 2,
+    borderColor: '#bb86fc',
+  },
+  info: {
+    marginLeft: 12,
   },
   name: {
     fontSize: 16,
-    marginLeft: 10,
+    fontWeight: '600',
+    color: '#ffffff',
   },
   number: {
     fontSize: 14,
-    marginLeft: 10,
-    color: '#555',
+    color: '#cccccc',
   },
 });
 
